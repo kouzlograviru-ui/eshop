@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kouzlo Gravíru - Project Visualization</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #FFEED6 0%, #EDB68A 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #A46114;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #A46114;
+      opacity: 0.8;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(164, 97, 20, 0.15);
+      border: 2px solid rgba(237, 182, 138, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(164, 97, 20, 0.25);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #EDB68A;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #EDB68A, #D4A574);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      color: #A46114;
+      font-weight: 600;
+    }
+
+    .card-content {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .file-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .file-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(237, 182, 138, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .file-list li:last-child {
+      border-bottom: none;
+    }
+
+    .file-icon {
+      color: #EDB68A;
+      font-weight: bold;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tech-badge {
+      background: linear-gradient(135deg, #A46114, #8B5010);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .structure-view {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(164, 97, 20, 0.15);
+      border: 2px solid rgba(237, 182, 138, 0.3);
+    }
+
+    .tree {
+      font-family: 'Courier New', monospace;
+      color: #A46114;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .tree-item {
+      padding-left: 20px;
+    }
+
+    .tree-folder {
+      color: #D4A574;
+      font-weight: bold;
+    }
+
+    .tree-file {
+      color: #666;
+    }
+
+    .highlight {
+      background: rgba(237, 182, 138, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #A46114;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(180deg, #EDB68A, #A46114);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🪵 Kouzlo Gravíru</h1>
+    <p class="subtitle">Czech Wooden Engraving Business - Project Architecture</p>
+
+    <h2 class="section-title">Project Overview</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">🎨</div>
+          <h3 class="card-title">Design System</h3>
+        </div>
+        <div class="card-content">
+          <p>Warm, natural color palette inspired by wood:</p>
+          <ul class="file-list">
+            <li><span class="file-icon">•</span> Primary: #A46114 (Dark Wood)</li>
+            <li><span class="file-icon">•</span> Secondary: #EDB68A (Light Wood)</li>
+            <li><span class="file-icon">•</span> Background: #FFEED6 (Warm Beige)</li>
+            <li><span class="file-icon">•</span> Backdrop blur effects</li>
+            <li><span class="file-icon">•</span> Smooth transitions & animations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">⚛️</div>
+          <h3 class="card-title">Tech Stack</h3>
+        </div>
+        <div class="card-content">
+          <p>Modern React + TypeScript setup:</p>
+          <div class="tech-stack">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Vite</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">Framer Motion</span>
+            <span class="tech-badge">Radix UI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">🧩</div>
+          <h3 class="card-title">Main Components</h3>
+        </div>
+        <div class="card-content">
+          <ul class="file-list">
+            <li><span class="file-icon">📄</span> Header (sticky navigation)</li>
+            <li><span class="file-icon">📄</span> Hero (large image + text banner)</li>
+            <li><span class="file-icon">📄</span> Products (3 wood items grid)</li>
+            <li><span class="file-icon">📄</span> Location (contact + map)</li>
+            <li><span class="file-icon">📄</span> Footer (links + social)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">File Structure</h2>
+    <div class="structure-view">
+      <div class="tree">
+<strong class="tree-folder">src/</strong>
+├── <strong class="tree-folder">components/</strong>
+│   ├── <span class="highlight">Header.tsx</span> - Fixed navigation with hamburger menu
+│   ├── <span class="highlight">Hero.tsx</span> - Large hero section with overlapping design
+│   ├── <span class="highlight">Products.tsx</span> - Product grid with animations
+│   ├── <span class="highlight">Location.tsx</span> - Contact info + map section
+│   ├── <span class="highlight">Footer.tsx</span> - Site footer with social links
+│   ├── <strong class="tree-folder">ui/</strong> - shadcn/ui components (45+ components)
+│   │   ├── button.tsx, card.tsx, input.tsx, etc.
+│   │   └── utils.ts - cn() helper
+│   └── <strong class="tree-folder">figma/</strong>
+│       └── ImageWithFallback.tsx - Image error handling
+│
+├── <strong class="tree-folder">styles/</strong>
+│   └── globals.css - CSS variables, theme, base styles
+│
+├── <strong class="tree-folder">assets/</strong>
+│   └── [hero image]
+│
+├── <span class="highlight">App.tsx</span> - Main app with background & layout
+├── <span class="highlight">main.tsx</span> - React entry point
+└── <span class="highlight">index.css</span> - Compiled Tailwind CSS
+      </div>
+    </div>
+
+    <h2 class="section-title">Key Features</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">📱</div>
+          <h3 class="card-title">Responsive Design</h3>
+        </div>
+        <div class="card-content">
+          <p>Mobile-first approach with breakpoints:</p>
+          <ul class="file-list">
+            <li><span class="file-icon">•</span> Hamburger menu on mobile</li>
+            <li><span class="file-icon">•</span> Adaptive grid layouts</li>
+            <li><span class="file-icon">•</span> Touch-friendly interactions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">✨</div>
+          <h3 class="card-title">Animations</h3>
+        </div>
+        <div class="card-content">
+          <p>Smooth, professional motion:</p>
+          <ul class="file-list">
+            <li><span class="file-icon">•</span> Framer Motion for complex animations</li>
+            <li><span class="file-icon">•</span> Hover effects on products</li>
+            <li><span class="file-icon">•</span> Menu slide-in transitions</li>
+            <li><span class="file-icon">•</span> Scroll-triggered fade-ins</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">🖼️</div>
+          <h3 class="card-title">Visual Effects</h3>
+        </div>
+        <div class="card-content">
+          <p>Premium glassmorphism design:</p>
+          <ul class="file-list">
+            <li><span class="file-icon">•</span> Backdrop blur on cards</li>
+            <li><span class="file-icon">•</span> Semi-transparent overlays</li>
+            <li><span class="file-icon">•</span> Wood texture background</li>
+            <li><span class="file-icon">•</span> Soft shadows & borders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Page Sections</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">🏠</div>
+          <h3 class="card-title">Hero Section</h3>
+        </div>
+        <div class="card-content">
+          <p>Large 60/40 split layout with overlapping glass card. Features the main tagline "Objevte kouzlo dřeva" (Discover the magic of wood).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">🛍️</div>
+          <h3 class="card-title">Products Grid</h3>
+        </div>
+        <div class="card-content">
+          <p>Three featured products with images, descriptions, and prices. Includes hover animations and glassmorphic cards.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon">📍</div>
+          <h3 class="card-title">Contact/Location</h3>
+        </div>
+        <div class="card-content">
+          <p>Two-column layout with contact details (address, phone, email) on the left and map placeholder on the right.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
